@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tanhvpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tanhvpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: tanhvpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: tanhvpipelinesjavascriptdocker 
+          image: tancontainerregistry.azurecr.io/tanhvpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
